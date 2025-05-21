@@ -1,7 +1,7 @@
 import { Toaster as HotToaster } from 'react-hot-toast';
 import { useApp } from '../../hooks/useApp';
 
-export const Toaster = () => {
+const Toaster = () => {
   const { isDarkMode } = useApp();
   
   return (
@@ -29,3 +29,5 @@ export const Toaster = () => {
     />
   );
 };
+
+export { Toaster };
