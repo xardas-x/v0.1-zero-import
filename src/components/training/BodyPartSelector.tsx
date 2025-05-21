@@ -62,83 +62,89 @@ const BodyPartSelector: React.FC = () => {
         <div className="my-4 flex items-center justify-center">
           <div className="border border-gray-300 rounded-lg p-4 dark:border-gray-700">
             <svg
-              width="150"
-              height="220"
-              viewBox="0 0 150 220"
+              width="200"
+              height="300"
+              viewBox="0 0 200 300"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="mx-auto"
             >
-              {/* Simplified anatomical illustration */}
-              <path
-                d="M75 30 C55 30, 45 40, 45 60 C45 90, 65 100, 75 120 C85 100, 105 90, 105 60 C105 40, 95 30, 75 30"
-                fill={bodyParts.find(p => p.id === 'chest')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="1"
-                className="transition-colors duration-300"
-              />
-              <path
-                d="M45 60 C35 65, 30 75, 25 110 C23 125, 35 140, 30 160 C29 170, 35 180, 35 190 L45 190 C45 175, 40 170, 45 155 C50 140, 50 120, 55 110 C62 90, 65 80, 65 65"
-                fill={bodyParts.find(p => p.id === 'arms')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="1"
-                className="transition-colors duration-300"
-              />
-              <path
-                d="M105 60 C115 65, 120 75, 125 110 C127 125, 115 140, 120 160 C121 170, 115 180, 115 190 L105 190 C105 175, 110 170, 105 155 C100 140, 100 120, 95 110 C88 90, 85 80, 85 65"
-                fill={bodyParts.find(p => p.id === 'arms')?.selected ? '#93C5FD' : '#E5E7EB'} 
-                stroke="#374151"
-                strokeWidth="1"
-                className="transition-colors duration-300"
-              />
-              <path
-                d="M75 120 C65 120, 55 125, 50 140 C45 155, 45 170, 45 190 L55 190 C55 170, 55 155, 60 145 C65 135, 70 130, 75 130"
-                fill={bodyParts.find(p => p.id === 'legs')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="1"
-                className="transition-colors duration-300"
-              />
-              <path
-                d="M75 120 C85 120, 95 125, 100 140 C105 155, 105 170, 105 190 L95 190 C95 170, 95 155, 90 145 C85 135, 80 130, 75 130"
-                fill={bodyParts.find(p => p.id === 'legs')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="1"
-                className="transition-colors duration-300"
-              />
+              {/* Head */}
               <circle
-                cx="75"
-                cy="20"
-                r="15"
+                cx="100"
+                cy="40"
+                r="20"
                 fill="#E5E7EB"
                 stroke="#374151"
-                strokeWidth="1"
+                strokeWidth="2"
               />
+              
+              {/* Shoulders */}
               <path
-                d="M55 40 L55 60 C55 75, 65 80, 75 90 C85 80, 95 75, 95 60 L95 40"
+                d={`M60 70 Q100 60 140 70`}
                 fill={bodyParts.find(p => p.id === 'shoulders')?.selected ? '#93C5FD' : '#E5E7EB'}
                 stroke="#374151"
-                strokeWidth="1"
+                strokeWidth="2"
+                className="transition-colors duration-300"
+              />
+              
+              {/* Chest */}
+              <path
+                d={`M70 70 Q100 90 130 70 Q130 100 100 110 Q70 100 70 70`}
+                fill={bodyParts.find(p => p.id === 'chest')?.selected ? '#93C5FD' : '#E5E7EB'}
+                stroke="#374151"
+                strokeWidth="2"
+                className="transition-colors duration-300"
+              />
+              
+              {/* Arms */}
+              <path
+                d={`M60 70 Q40 90 35 130 L45 130 Q50 90 65 75`}
+                fill={bodyParts.find(p => p.id === 'arms')?.selected ? '#93C5FD' : '#E5E7EB'}
+                stroke="#374151"
+                strokeWidth="2"
                 className="transition-colors duration-300"
               />
               <path
-                d="M55 90 L55 120 L95 120 L95 90" 
+                d={`M140 70 Q160 90 165 130 L155 130 Q150 90 135 75`}
+                fill={bodyParts.find(p => p.id === 'arms')?.selected ? '#93C5FD' : '#E5E7EB'}
+                stroke="#374151"
+                strokeWidth="2"
+                className="transition-colors duration-300"
+              />
+              
+              {/* Core */}
+              <path
+                d={`M70 110 Q100 120 130 110 Q130 150 100 160 Q70 150 70 110`}
                 fill={bodyParts.find(p => p.id === 'core')?.selected ? '#93C5FD' : '#E5E7EB'}
                 stroke="#374151"
-                strokeWidth="1"
+                strokeWidth="2"
+                className="transition-colors duration-300"
+              />
+              
+              {/* Back */}
+              <path
+                d={`M70 90 Q100 100 130 90 L130 140 Q100 150 70 140 Z`}
+                fill={bodyParts.find(p => p.id === 'back')?.selected ? '#93C5FD' : '#E5E7EB'}
+                stroke="#374151"
+                strokeWidth="2"
+                className="transition-colors duration-300"
+                opacity="0.5"
+              />
+              
+              {/* Legs */}
+              <path
+                d={`M85 160 Q80 200 75 250 L90 250 Q95 200 95 160`}
+                fill={bodyParts.find(p => p.id === 'legs')?.selected ? '#93C5FD' : '#E5E7EB'}
+                stroke="#374151"
+                strokeWidth="2"
                 className="transition-colors duration-300"
               />
               <path
-                d="M45 60 L45 90 C45 100, 55 110, 55 120" 
-                fill={bodyParts.find(p => p.id === 'back')?.selected ? '#93C5FD' : '#E5E7EB'}
+                d={`M115 160 Q120 200 125 250 L110 250 Q105 200 105 160`}
+                fill={bodyParts.find(p => p.id === 'legs')?.selected ? '#93C5FD' : '#E5E7EB'}
                 stroke="#374151"
-                strokeWidth="1"
-                className="transition-colors duration-300"
-              />
-              <path
-                d="M105 60 L105 90 C105 100, 95 110, 95 120" 
-                fill={bodyParts.find(p => p.id === 'back')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="1"
+                strokeWidth="2"
                 className="transition-colors duration-300"
               />
             </svg>
