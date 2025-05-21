@@ -60,95 +60,11 @@ const BodyPartSelector: React.FC = () => {
         </div>
         
         <div className="my-4 flex items-center justify-center">
-          <div className="border border-gray-300 rounded-lg p-4 dark:border-gray-700">
-            <svg
-              width="200"
-              height="300"
-              viewBox="0 0 200 300"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mx-auto"
-            >
-              {/* Head */}
-              <circle
-                cx="100"
-                cy="40"
-                r="20"
-                fill="#E5E7EB"
-                stroke="#374151"
-                strokeWidth="2"
-              />
-              
-              {/* Shoulders */}
-              <path
-                d={`M60 70 Q100 60 140 70`}
-                fill={bodyParts.find(p => p.id === 'shoulders')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="2"
-                className="transition-colors duration-300"
-              />
-              
-              {/* Chest */}
-              <path
-                d={`M70 70 Q100 90 130 70 Q130 100 100 110 Q70 100 70 70`}
-                fill={bodyParts.find(p => p.id === 'chest')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="2"
-                className="transition-colors duration-300"
-              />
-              
-              {/* Arms */}
-              <path
-                d={`M60 70 Q40 90 35 130 L45 130 Q50 90 65 75`}
-                fill={bodyParts.find(p => p.id === 'arms')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="2"
-                className="transition-colors duration-300"
-              />
-              <path
-                d={`M140 70 Q160 90 165 130 L155 130 Q150 90 135 75`}
-                fill={bodyParts.find(p => p.id === 'arms')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="2"
-                className="transition-colors duration-300"
-              />
-              
-              {/* Core */}
-              <path
-                d={`M70 110 Q100 120 130 110 Q130 150 100 160 Q70 150 70 110`}
-                fill={bodyParts.find(p => p.id === 'core')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="2"
-                className="transition-colors duration-300"
-              />
-              
-              {/* Back */}
-              <path
-                d={`M70 90 Q100 100 130 90 L130 140 Q100 150 70 140 Z`}
-                fill={bodyParts.find(p => p.id === 'back')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="2"
-                className="transition-colors duration-300"
-                opacity="0.5"
-              />
-              
-              {/* Legs */}
-              <path
-                d={`M85 160 Q80 200 75 250 L90 250 Q95 200 95 160`}
-                fill={bodyParts.find(p => p.id === 'legs')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="2"
-                className="transition-colors duration-300"
-              />
-              <path
-                d={`M115 160 Q120 200 125 250 L110 250 Q105 200 105 160`}
-                fill={bodyParts.find(p => p.id === 'legs')?.selected ? '#93C5FD' : '#E5E7EB'}
-                stroke="#374151"
-                strokeWidth="2"
-                className="transition-colors duration-300"
-              />
-            </svg>
-          </div>
+          <img 
+            src="https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="Human anatomy reference"
+            className="h-64 object-contain rounded-lg opacity-80"
+          />
         </div>
       </div>
     </Card>
