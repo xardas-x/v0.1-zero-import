@@ -1,8 +1,8 @@
 import { Toaster as HotToaster } from 'react-hot-toast';
-import { useAppContext } from '../../context/AppContext';
+import { useApp } from '../../hooks/useApp';
 
 export const Toaster = () => {
-  const { isDarkMode } = useAppContext();
+  const { isDarkMode } = useApp();
   
   return (
     <HotToaster

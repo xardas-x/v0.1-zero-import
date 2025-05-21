@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useAppContext } from '../context/AppContext';
+import { useApp } from '../hooks/useApp';
 
 // Components
 import Header from '../components/navigation/Header';
@@ -12,7 +12,7 @@ import WorkoutDisplay from '../components/workouts/WorkoutDisplay';
 import WorkoutHistory from '../components/workouts/WorkoutHistory';
 
 const HomePage: React.FC = () => {
-  const { isDarkMode } = useAppContext();
+  const { isDarkMode } = useApp();
   
   // Apply dark mode class to body
   useEffect(() => {
