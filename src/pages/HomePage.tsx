@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useApp } from '../hooks/useApp';
-import { AppProvider } from '../context/AppContext';
 
 // Components
 import Header from '../components/navigation/Header';
@@ -12,7 +11,7 @@ import GoalInput from '../components/goals/GoalInput';
 import WorkoutDisplay from '../components/workouts/WorkoutDisplay';
 import WorkoutHistory from '../components/workouts/WorkoutHistory';
 
-const HomePageContent: React.FC = () => {
+const HomePage: React.FC = () => {
   const { isDarkMode } = useApp();
   
   // Apply dark mode class to body
@@ -67,14 +66,6 @@ const HomePageContent: React.FC = () => {
         </div>
       </footer>
     </div>
-  );
-};
-
-const HomePage: React.FC = () => {
-  return (
-    <AppProvider>
-      <HomePageContent />
-    </AppProvider>
   );
 };
 
